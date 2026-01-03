@@ -94,8 +94,8 @@ body {
   padding: 16px;
 }
 
-/* Travel Card */
-.travel-card {
+/* Form Card */
+.form-card {
   background: white;
   border-radius: 20px;
   padding: 24px;
@@ -114,152 +114,177 @@ body {
   }
 }
 
-/* Card Header */
-.card-header {
+/* Form Header */
+.form-header {
   margin-bottom: 24px;
   text-align: center;
 }
 
-.date-badge {
-  display: inline-block;
-  background: linear-gradient(135deg, #FFB347 0%, #FF8C42 100%);
-  color: white;
-  padding: 6px 12px;
-  border-radius: 12px;
-  font-size: 12px;
-  font-weight: 600;
-  margin-bottom: 12px;
-}
-
-.travel-title {
+.form-title {
   font-size: 24px;
   font-weight: 700;
   color: #000;
   margin-bottom: 6px;
 }
 
-.travel-subtitle {
+.form-subtitle {
   font-size: 14px;
   color: #999;
 }
 
-/* Section Groups */
-.section-group {
-  margin-bottom: 24px;
+/* Form */
+.travel-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.section-title {
+/* Form Section */
+.form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-section-title {
   font-size: 14px;
   font-weight: 600;
   color: #007AFF;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  margin-bottom: 12px;
 }
 
-/* Info Grid */
-.info-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-}
-
-.info-item {
-  background: #f5f7fa;
-  border-radius: 12px;
-  padding: 12px;
+/* Form Group */
+.form-group {
   display: flex;
   flex-direction: column;
-  gap: 4px;
-  transition: transform 0.2s, box-shadow 0.2s;
+  gap: 6px;
 }
 
-.info-item:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 122, 255, 0.1);
-}
-
-.label {
-  font-size: 12px;
-  color: #999;
-  font-weight: 500;
-}
-
-.value {
-  font-size: 16px;
-  color: #000;
+.form-group label {
+  font-size: 13px;
   font-weight: 600;
+  color: #333;
 }
 
-/* Info Rows */
-.info-rows {
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  font-size: 14px;
+  font-family: inherit;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #007AFF;
+  box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Radio Group */
+.radio-group {
   display: flex;
   flex-direction: column;
-  gap: 0;
+  gap: 10px;
 }
 
-.info-row {
+.radio-label {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 12px 0;
-  border-bottom: 1px solid #eee;
+  gap: 12px;
+  cursor: pointer;
+  padding: 12px;
+  border-radius: 12px;
   transition: background 0.2s;
 }
 
-.info-row:last-child {
-  border-bottom: none;
-}
-
-.info-row:active {
+.radio-label:hover {
   background: #f5f7fa;
 }
 
-.row-label {
-  font-size: 13px;
-  color: #666;
-  font-weight: 500;
+.radio-label input[type="radio"] {
+  display: none;
 }
 
-.row-value {
+.radio-custom {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ddd;
+  border-radius: 50%;
+  transition: all 0.2s;
+}
+
+.radio-label input[type="radio"]:checked ~ .radio-custom {
+  border-color: #007AFF;
+  background: #007AFF;
+  box-shadow: inset 0 0 0 3px white;
+}
+
+.radio-text {
   font-size: 14px;
-  color: #000;
-  font-weight: 600;
-  text-align: right;
-}
-
-/* Contact Card */
-.contact-card {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  border-radius: 16px;
-  padding: 16px;
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  color: white;
-}
-
-.contact-icon {
-  font-size: 32px;
-  display: flex;
-  align-items: center;
-}
-
-.contact-details {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.contact-method {
-  font-size: 13px;
-  opacity: 0.9;
   font-weight: 500;
+  color: #333;
 }
 
-.contact-id {
-  font-size: 16px;
-  font-weight: 600;
+/* Checkbox Group */
+.checkbox-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 10px;
+  transition: background 0.2s;
+  font-size: 13px;
+  font-weight: 500;
+  color: #333;
+}
+
+.checkbox-label:hover {
+  background: #f5f7fa;
+}
+
+.checkbox-label input[type="checkbox"] {
+  display: none;
+}
+
+.checkbox-custom {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkbox-label input[type="checkbox"]:checked ~ .checkbox-custom {
+  border-color: #007AFF;
+  background: #007AFF;
+}
+
+.checkbox-label input[type="checkbox"]:checked ~ .checkbox-custom::after {
+  content: "✓";
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
 }
 
 /* iOS Button */
@@ -277,7 +302,6 @@ body {
   text-decoration: none;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   margin-top: 24px;
-  width: 100%;
   box-shadow: 0 4px 16px rgba(0, 122, 255, 0.3);
 }
 
@@ -296,6 +320,10 @@ body {
   transform: translateY(-2px);
 }
 
+.ios-button.full-width {
+  width: 100%;
+}
+
 .button-icon {
   font-size: 18px;
 }
@@ -312,6 +340,31 @@ body {
 
 .ios-button.primary:hover .button-arrow {
   transform: translateX(4px);
+}
+
+/* Success/Error Messages */
+.success-message {
+  padding: 12px;
+  background: #d4edda;
+  color: #155724;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 12px;
+  animation: slideUp 0.3s ease-out;
+}
+
+.error-message {
+  padding: 12px;
+  background: #f8d7da;
+  color: #721c24;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 12px;
+  animation: slideUp 0.3s ease-out;
 }
 
 /* Scrollbar Styling */
@@ -339,16 +392,16 @@ body {
     border-radius: 0;
   }
 
-  .travel-card {
+  .form-card {
     border-radius: 16px;
     padding: 20px;
   }
 
-  .travel-title {
+  .form-title {
     font-size: 22px;
   }
 
-  .info-grid {
+  .checkbox-group {
     grid-template-columns: 1fr;
   }
 }

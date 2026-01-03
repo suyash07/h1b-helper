@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Travel Companion</title>
+  <title>H1B Travel Companion</title>
   <link rel="manifest" href="/manifest.json" />
   <meta name="theme-color" content="#007AFF"/>
   <link rel="stylesheet" href="style.css" />
@@ -21,85 +21,169 @@
         </div>
       </div>
       <div class="nav-bar">
-        <button class="back-btn">← Back</button>
-        <h1>Travel Companion</h1>
-        <div class="spacer"></div>
+        <h1>H1B Travel Companion</h1>
       </div>
     </header>
 
     <!-- Main Content -->
     <main class="main-content">
-      <!-- Travel Card -->
-      <section class="travel-card">
+      <!-- Form Card -->
+      <section class="form-card">
         <!-- Header Section -->
-        <div class="card-header">
-          <div class="date-badge">📅 FEB 14, 2026</div>
-          <h2 class="travel-title">Find Your Travel Companion</h2>
-          <p class="travel-subtitle">Looking for someone to travel with</p>
+        <div class="form-header">
+          <h2 class="form-title">✈️ Find Your Travel Buddy</h2>
+          <p class="form-subtitle">Connect with fellow H1B travelers</p>
         </div>
 
-        <!-- Flight Info Section -->
-        <div class="section-group">
-          <h3 class="section-title">✈️ Flight Details</h3>
-          <div class="info-grid">
-            <div class="info-item">
-              <span class="label">Departure</span>
-              <strong class="value">12:00 PM</strong>
+        <!-- Form -->
+        <form id="travelForm" class="travel-form">
+          <!-- Trip Details Section -->
+          <div class="form-section">
+            <h3 class="form-section-title">📅 Trip Details</h3>
+            
+            <div class="form-group">
+              <label for="startDate">Start Date & Time</label>
+              <input type="datetime-local" id="startDate" name="startDate" required>
             </div>
-            <div class="info-item">
-              <span class="label">From</span>
-              <strong class="value">JFK</strong>
+
+            <div class="form-group">
+              <label for="origin">Origin Airport</label>
+              <input type="text" id="origin" name="origin" placeholder="e.g., JFK, LAX" required>
             </div>
-            <div class="info-item">
-              <span class="label">To</span>
-              <strong class="value">TRV</strong>
+
+            <div class="form-group">
+              <label for="endDate">End Date & Time</label>
+              <input type="datetime-local" id="endDate" name="endDate" required>
             </div>
-            <div class="info-item">
-              <span class="label">Flight</span>
-              <strong class="value">EK 523</strong>
+
+            <div class="form-group">
+              <label for="destination">Destination Airport</label>
+              <input type="text" id="destination" name="destination" placeholder="e.g., DEL, BOM" required>
+            </div>
+
+            <div class="form-group">
+              <label for="flightNumber">Flight Number</label>
+              <input type="text" id="flightNumber" name="flightNumber" placeholder="e.g., AI 523">
             </div>
           </div>
-        </div>
 
-        <!-- Request Info Section -->
-        <div class="section-group">
-          <h3 class="section-title">📋 Request Information</h3>
-          <div class="info-rows">
-            <div class="info-row">
-              <span class="row-label">Request Type</span>
-              <span class="row-value">Need a Travel Companion</span>
-            </div>
-            <div class="info-row">
-              <span class="row-label">Posted By</span>
-              <span class="row-value">Prem</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Contact Info Section -->
-        <div class="section-group">
-          <h3 class="section-title">💬 Contact Information</h3>
-          <div class="contact-card">
-            <div class="contact-icon">📱</div>
-            <div class="contact-details">
-              <span class="contact-method">Instagram Direct Message</span>
-              <span class="contact-id">@prem.shashi</span>
+          <!-- Participation Section -->
+          <div class="form-section">
+            <h3 class="form-section-title">🤝 Participation Role</h3>
+            
+            <div class="radio-group">
+              <label class="radio-label">
+                <input type="radio" name="role" value="offering-help" required>
+                <span class="radio-custom"></span>
+                <span class="radio-text">Offering Help</span>
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="role" value="need-help" required>
+                <span class="radio-custom"></span>
+                <span class="radio-text">Need Help</span>
+              </label>
             </div>
           </div>
-        </div>
 
-        <!-- CTA Button -->
-        <a href="https://instagram.com/prem.shashi/" 
-           target="_blank"
-           class="ios-button primary">
-          <span class="button-icon">📧</span>
-          <span class="button-text">Message on Instagram</span>
-          <span class="button-arrow">→</span>
-        </a>
+          <!-- Message Section -->
+          <div class="form-section">
+            <h3 class="form-section-title">💬 Message</h3>
+            
+            <div class="form-group">
+              <label for="message">Your Message</label>
+              <textarea id="message" name="message" placeholder="Tell them about yourself..." rows="4"></textarea>
+            </div>
+          </div>
+
+          <!-- Language Section -->
+          <div class="form-section">
+            <h3 class="form-section-title">🗣️ Language</h3>
+            
+            <div class="checkbox-group">
+              <label class="checkbox-label">
+                <input type="checkbox" name="language" value="English">
+                <span class="checkbox-custom"></span>
+                <span>English</span>
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="language" value="Hindi">
+                <span class="checkbox-custom"></span>
+                <span>Hindi</span>
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="language" value="Marathi">
+                <span class="checkbox-custom"></span>
+                <span>Marathi</span>
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="language" value="Telugu">
+                <span class="checkbox-custom"></span>
+                <span>Telugu</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Contact Section -->
+          <div class="form-section">
+            <h3 class="form-section-title">📱 Contact Information</h3>
+            
+            <div class="form-group">
+              <label for="contactType">Preferred Contact Method</label>
+              <select id="contactType" name="contactType" required>
+                <option value="">Select contact method</option>
+                <option value="email">Email</option>
+                <option value="instagram">Instagram Handle</option>
+                <option value="phone">Phone Number</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="contactValue">Contact Details</label>
+              <input type="text" id="contactValue" name="contactValue" placeholder="your@email.com or @instagram or +1234567890" required>
+            </div>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="ios-button primary full-width">
+            <span class="button-icon">🚀</span>
+            <span class="button-text">Post Your Trip</span>
+            <span class="button-arrow">→</span>
+          </button>
+
+          <!-- Success Message -->
+          <div id="successMessage" class="success-message" style="display: none;">
+            ✓ Posted successfully! Your trip is now live.
+          </div>
+
+          <!-- Error Message -->
+          <div id="errorMessage" class="error-message" style="display: none;"></div>
+        </form>
       </section>
     </main>
   </div>
 
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-database.js"></script>
+  
   <script src="app.js"></script>
 </body>
 </html>
+
+Start:
+12/29/2025, 10:00:00 AM
+Origin:
+JFK
+End:
+1/22/2026, 11:30:00 AM
+Destination:
+RIA
+Flight:
+AI116
+Participation Role:
+Offering Help
+Message:
+N/A
+Languages:
+TELUGU, ENGLISH, HINDI
+Contact
