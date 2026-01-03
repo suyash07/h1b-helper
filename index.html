@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Travel Companion</title>
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#007AFF"/>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header -->
+    <header class="ios-header">
+      <div class="status-bar">
+        <span class="time">9:41</span>
+        <div class="status-icons">
+          <span>📶</span>
+          <span>📡</span>
+          <span>🔋</span>
+        </div>
+      </div>
+      <div class="nav-bar">
+        <button class="back-btn">← Back</button>
+        <h1>Travel Companion</h1>
+        <div class="spacer"></div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Travel Card -->
+      <section class="travel-card">
+        <!-- Header Section -->
+        <div class="card-header">
+          <div class="date-badge">📅 FEB 14, 2026</div>
+          <h2 class="travel-title">Find Your Travel Companion</h2>
+          <p class="travel-subtitle">Looking for someone to travel with</p>
+        </div>
+
+        <!-- Flight Info Section -->
+        <div class="section-group">
+          <h3 class="section-title">✈️ Flight Details</h3>
+          <div class="info-grid">
+            <div class="info-item">
+              <span class="label">Departure</span>
+              <strong class="value">12:00 PM</strong>
+            </div>
+            <div class="info-item">
+              <span class="label">From</span>
+              <strong class="value">JFK</strong>
+            </div>
+            <div class="info-item">
+              <span class="label">To</span>
+              <strong class="value">TRV</strong>
+            </div>
+            <div class="info-item">
+              <span class="label">Flight</span>
+              <strong class="value">EK 523</strong>
+            </div>
+          </div>
+        </div>
+
+        <!-- Request Info Section -->
+        <div class="section-group">
+          <h3 class="section-title">📋 Request Information</h3>
+          <div class="info-rows">
+            <div class="info-row">
+              <span class="row-label">Request Type</span>
+              <span class="row-value">Need a Travel Companion</span>
+            </div>
+            <div class="info-row">
+              <span class="row-label">Posted By</span>
+              <span class="row-value">Prem</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Info Section -->
+        <div class="section-group">
+          <h3 class="section-title">💬 Contact Information</h3>
+          <div class="contact-card">
+            <div class="contact-icon">📱</div>
+            <div class="contact-details">
+              <span class="contact-method">Instagram Direct Message</span>
+              <span class="contact-id">@prem.shashi</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA Button -->
+        <a href="https://instagram.com/dr_snehal_mhetre/" 
+           target="_blank"
+           class="ios-button primary">
+          <span class="button-icon">📧</span>
+          <span class="button-text">Message on Instagram</span>
+          <span class="button-arrow">→</span>
+        </a>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
