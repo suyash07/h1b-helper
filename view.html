@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Browse Trips</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    <header class="ios-header">
+      <div class="status-bar"><span class="time">9:41</span><div class="status-icons">📶 📡 🔋</div></div>
+      <div class="nav-bar"><a href="home.html" style="color:white;text-decoration:none;">← Home</a><h1>Trips</h1><div class="spacer"></div></div>
+    </header>
+
+    <main class="main-content">
+      <section class="form-card">
+        <div style="display:flex;gap:8px;align-items:center;margin-bottom:12px;">
+          <button id="filterAll" class="submit-btn" style="flex:1;background:#007AFF;">All</button>
+          <button id="filterOffer" class="submit-btn" style="flex:1;background:#34C759;">Offering</button>
+          <button id="filterNeed" class="submit-btn" style="flex:1;background:#FF9500;">Need Help</button>
+        </div>
+
+        <div id="listings">
+          <p style="color:#666">Loading…</p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Firebase (compat) -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
+  <script src="view.js"></script>
+</body>
+</html>
