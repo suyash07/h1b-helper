@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Post a Trip</title>
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#007AFF"/>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Original form moved here -->
+  <div class="app-container">
+    <!-- Header -->
+    <header class="ios-header">
+      <div class="status-bar">
+        <span class="time">9:41</span>
+        <div class="status-icons">
+          <span>📶</span>
+          <span>📡</span>
+          <span>🔋</span>
+        </div>
+      </div>
+      <div class="nav-bar">
+        <h1>Post a Trip</h1>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Form Card -->
+      <section class="form-card">
+        <!-- Form -->
+        <form id="travelForm" class="travel-form">
+
+          <!-- Trip Details -->
+          <div class="input-group">
+            <label>Departure</label>
+            <input type="datetime-local" id="startDate" name="startDate" required>
+          </div>
+
+          <div class="input-row">
+            <div class="input-group">
+              <label>From</label>
+              <input type="text" id="origin" name="origin" placeholder="JFK" required>
+            </div>
+            <div class="input-group">
+              <label>To</label>
+              <input type="text" id="destination" name="destination" placeholder="DEL" required>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label>Return</label>
+            <input type="datetime-local" id="endDate" name="endDate" required>
+          </div>
+
+          <div class="input-group">
+            <label>Flight (Optional)</label>
+            <input type="text" id="flightNumber" name="flightNumber" placeholder="AI 523">
+          </div>
+
+          <!-- Divider -->
+          <div class="divider"></div>
+
+          <!-- Role Section -->
+          <div class="section-label">How can you help?</div>
+          
+          <div class="button-group">
+            <label class="button-radio">
+              <input type="radio" name="role" value="offering-help" required>
+              <span>🤲 Offering Help</span>
+            </label>
+            <label class="button-radio">
+              <input type="radio" name="role" value="need-help" required>
+              <span>🙏 Need Help</span>
+            </label>
+          </div>
+
+          <!-- Divider -->
+          <div class="divider"></div>
+
+          <!-- Languages -->
+          <div class="section-label">Languages</div>
+          
+          <div class="checkbox-row">
+            <label class="checkbox-mini">
+              <input type="checkbox" name="language" value="English">
+              <span>English</span>
+            </label>
+            <label class="checkbox-mini">
+              <input type="checkbox" name="language" value="Hindi">
+              <span>हिंदी</span>
+            </label>
+            <label class="checkbox-mini">
+              <input type="checkbox" name="language" value="Marathi">
+              <span>मराठी</span>
+            </label>
+            <label class="checkbox-mini">
+              <input type="checkbox" name="language" value="Telugu">
+              <span>తెలుగు</span>
+            </label>
+          </div>
+
+          <!-- Divider -->
+          <div class="divider"></div>
+
+          <!-- About You -->
+          <div class="input-group">
+            <label>About You</label>
+            <textarea id="message" name="message" placeholder="Tell them about yourself..." rows="3"></textarea>
+          </div>
+
+          <!-- Contact -->
+          <div class="input-group">
+            <label>Contact Method</label>
+            <select id="contactType" name="contactType" required>
+              <option value="">Choose one</option>
+              <option value="email">📧 Email</option>
+              <option value="instagram">📱 Instagram</option>
+              <option value="phone">☎️ Phone</option>
+            </select>
+          </div>
+
+          <div class="input-group">
+            <label>Contact Details</label>
+            <input type="text" id="contactValue" name="contactValue" placeholder="your@email.com" required>
+          </div>
+
+          <!-- Divider -->
+          <div class="divider"></div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="submit-btn">Post Trip</button>
+
+          <!-- Success/Error Messages -->
+          <div id="successMessage" class="alert alert-success" style="display: none;">
+            ✓ Posted successfully!
+          </div>
+          <div id="errorMessage" class="alert alert-error" style="display: none;"></div>
+        </form>
+      </section>
+    </main>
+  </div>
+
+  <!-- Firebase (compat builds for namespaced API) -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
+
+  <script src="app.js"></script>
+</body>
+</html>
