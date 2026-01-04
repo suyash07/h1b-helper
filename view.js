@@ -48,7 +48,7 @@ function renderTrips(filter) {
             <strong>${t.origin} → ${t.destination}</strong>
             <span style="color:#666">${new Date(t.startDate).toLocaleString()}</span>
           </div>
-          <div style="color:#333;margin-bottom:6px">${t.flightNumber ? 'Flight: ' + t.flightNumber : ''}</div>
+          <div style="color:#333;margin-bottom:6px">${t.airline ? '✈️ ' + t.airline : ''} ${t.flightNumber ? '(Flight: ' + t.flightNumber + ')' : ''}</div>
           <div style="color:#444;margin-bottom:8px">${t.message || ''}</div>
           <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;">
             <div style="font-size:13px;color:#666">${t.languages ? t.languages.join(', ') : ''}</div>

@@ -1,12 +1,13 @@
 // Firebase Configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDxxxxxxxxxxx", // Replace with your API key
+  apiKey: "AIzaSyCnb1DgMpeKSDula4WkxCJ98sXp1luZHCU",
   authDomain: "h1bhelper-5c998.firebaseapp.com",
   databaseURL: "https://h1bhelper-5c998-default-rtdb.firebaseio.com",
   projectId: "h1bhelper-5c998",
-  storageBucket: "h1bhelper-5c998.appspot.com",
-  messagingSenderId: "xxxxxxxxxx",
-  appId: "1:xxxxxxxxxx:web:xxxxxxxxxx"
+  storageBucket: "h1bhelper-5c998.firebasestorage.app",
+  messagingSenderId: "402102186934",
+  appId: "1:402102186934:web:c0dbc73fc0aef924cb4717",
+  measurementId: "G-XJSW3XMWQ2"
 };
 
 // Initialize Firebase
@@ -27,6 +28,7 @@ document.getElementById("travelForm").addEventListener("submit", async (e) => {
     origin: document.getElementById("origin").value,
     endDate: document.getElementById("endDate").value,
     destination: document.getElementById("destination").value,
+    airline: document.getElementById("airline").value,
     flightNumber: document.getElementById("flightNumber").value,
     role: document.querySelector('input[name="role"]:checked').value,
     message: document.getElementById("message").value,
