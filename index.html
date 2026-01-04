@@ -21,7 +21,7 @@
         </div>
       </div>
       <div class="nav-bar">
-        <h1>H1B Travel Companion</h1>
+        <h1>Post a Trip</h1>
       </div>
     </header>
 
@@ -29,143 +29,123 @@
     <main class="main-content">
       <!-- Form Card -->
       <section class="form-card">
-        <!-- Header Section -->
-        <div class="form-header">
-          <h2 class="form-title">✈️ Find Your Travel Buddy</h2>
-          <p class="form-subtitle">Connect with fellow H1B travelers</p>
-        </div>
-
         <!-- Form -->
         <form id="travelForm" class="travel-form">
-          <!-- Trip Details Section -->
-          <div class="form-section">
-            <h3 class="form-section-title">📅 Trip Details</h3>
-            
-            <div class="form-group">
-              <label for="startDate">Start Date & Time</label>
-              <input type="datetime-local" id="startDate" name="startDate" required>
-            </div>
 
-            <div class="form-group">
-              <label for="origin">Origin Airport</label>
-              <input type="text" id="origin" name="origin" placeholder="e.g., JFK, LAX" required>
-            </div>
+          <!-- Trip Details -->
+          <div class="input-group">
+            <label>Departure</label>
+            <input type="datetime-local" id="startDate" name="startDate" required>
+          </div>
 
-            <div class="form-group">
-              <label for="endDate">End Date & Time</label>
-              <input type="datetime-local" id="endDate" name="endDate" required>
+          <div class="input-row">
+            <div class="input-group">
+              <label>From</label>
+              <input type="text" id="origin" name="origin" placeholder="JFK" required>
             </div>
-
-            <div class="form-group">
-              <label for="destination">Destination Airport</label>
-              <input type="text" id="destination" name="destination" placeholder="e.g., DEL, BOM" required>
-            </div>
-
-            <div class="form-group">
-              <label for="flightNumber">Flight Number</label>
-              <input type="text" id="flightNumber" name="flightNumber" placeholder="e.g., AI 523">
+            <div class="input-group">
+              <label>To</label>
+              <input type="text" id="destination" name="destination" placeholder="DEL" required>
             </div>
           </div>
 
-          <!-- Participation Section -->
-          <div class="form-section">
-            <h3 class="form-section-title">🤝 Participation Role</h3>
-            
-            <div class="radio-group">
-              <label class="radio-label">
-                <input type="radio" name="role" value="offering-help" required>
-                <span class="radio-custom"></span>
-                <span class="radio-text">Offering Help</span>
-              </label>
-              <label class="radio-label">
-                <input type="radio" name="role" value="need-help" required>
-                <span class="radio-custom"></span>
-                <span class="radio-text">Need Help</span>
-              </label>
-            </div>
+          <div class="input-group">
+            <label>Return</label>
+            <input type="datetime-local" id="endDate" name="endDate" required>
           </div>
 
-          <!-- Message Section -->
-          <div class="form-section">
-            <h3 class="form-section-title">💬 Message</h3>
-            
-            <div class="form-group">
-              <label for="message">Your Message</label>
-              <textarea id="message" name="message" placeholder="Tell them about yourself..." rows="4"></textarea>
-            </div>
+          <div class="input-group">
+            <label>Flight (Optional)</label>
+            <input type="text" id="flightNumber" name="flightNumber" placeholder="AI 523">
           </div>
 
-          <!-- Language Section -->
-          <div class="form-section">
-            <h3 class="form-section-title">🗣️ Language</h3>
-            
-            <div class="checkbox-group">
-              <label class="checkbox-label">
-                <input type="checkbox" name="language" value="English">
-                <span class="checkbox-custom"></span>
-                <span>English</span>
-              </label>
-              <label class="checkbox-label">
-                <input type="checkbox" name="language" value="Hindi">
-                <span class="checkbox-custom"></span>
-                <span>Hindi</span>
-              </label>
-              <label class="checkbox-label">
-                <input type="checkbox" name="language" value="Marathi">
-                <span class="checkbox-custom"></span>
-                <span>Marathi</span>
-              </label>
-              <label class="checkbox-label">
-                <input type="checkbox" name="language" value="Telugu">
-                <span class="checkbox-custom"></span>
-                <span>Telugu</span>
-              </label>
-            </div>
+          <!-- Divider -->
+          <div class="divider"></div>
+
+          <!-- Role Section -->
+          <div class="section-label">How can you help?</div>
+          
+          <div class="button-group">
+            <label class="button-radio">
+              <input type="radio" name="role" value="offering-help" required>
+              <span>🤲 Offering Help</span>
+            </label>
+            <label class="button-radio">
+              <input type="radio" name="role" value="need-help" required>
+              <span>🙏 Need Help</span>
+            </label>
           </div>
 
-          <!-- Contact Section -->
-          <div class="form-section">
-            <h3 class="form-section-title">📱 Contact Information</h3>
-            
-            <div class="form-group">
-              <label for="contactType">Preferred Contact Method</label>
-              <select id="contactType" name="contactType" required>
-                <option value="">Select contact method</option>
-                <option value="email">Email</option>
-                <option value="instagram">Instagram Handle</option>
-                <option value="phone">Phone Number</option>
-              </select>
-            </div>
+          <!-- Divider -->
+          <div class="divider"></div>
 
-            <div class="form-group">
-              <label for="contactValue">Contact Details</label>
-              <input type="text" id="contactValue" name="contactValue" placeholder="your@email.com or @instagram or +1234567890" required>
-            </div>
+          <!-- Languages -->
+          <div class="section-label">Languages</div>
+          
+          <div class="checkbox-row">
+            <label class="checkbox-mini">
+              <input type="checkbox" name="language" value="English">
+              <span>English</span>
+            </label>
+            <label class="checkbox-mini">
+              <input type="checkbox" name="language" value="Hindi">
+              <span>हिंदी</span>
+            </label>
+            <label class="checkbox-mini">
+              <input type="checkbox" name="language" value="Marathi">
+              <span>मराठी</span>
+            </label>
+            <label class="checkbox-mini">
+              <input type="checkbox" name="language" value="Telugu">
+              <span>తెలుగు</span>
+            </label>
           </div>
+
+          <!-- Divider -->
+          <div class="divider"></div>
+
+          <!-- About You -->
+          <div class="input-group">
+            <label>About You</label>
+            <textarea id="message" name="message" placeholder="Tell them about yourself..." rows="3"></textarea>
+          </div>
+
+          <!-- Contact -->
+          <div class="input-group">
+            <label>Contact Method</label>
+            <select id="contactType" name="contactType" required>
+              <option value="">Choose one</option>
+              <option value="email">📧 Email</option>
+              <option value="instagram">📱 Instagram</option>
+              <option value="phone">☎️ Phone</option>
+            </select>
+          </div>
+
+          <div class="input-group">
+            <label>Contact Details</label>
+            <input type="text" id="contactValue" name="contactValue" placeholder="your@email.com" required>
+          </div>
+
+          <!-- Divider -->
+          <div class="divider"></div>
 
           <!-- Submit Button -->
-          <button type="submit" class="ios-button primary full-width">
-            <span class="button-icon">🚀</span>
-            <span class="button-text">Post Your Trip</span>
-            <span class="button-arrow">→</span>
-          </button>
+          <button type="submit" class="submit-btn">Post Trip</button>
 
-          <!-- Success Message -->
-          <div id="successMessage" class="success-message" style="display: none;">
-            ✓ Posted successfully! Your trip is now live.
+          <!-- Success/Error Messages -->
+          <div id="successMessage" class="alert alert-success" style="display: none;">
+            ✓ Posted successfully!
           </div>
-
-          <!-- Error Message -->
-          <div id="errorMessage" class="error-message" style="display: none;"></div>
+          <div id="errorMessage" class="alert alert-error" style="display: none;"></div>
         </form>
       </section>
     </main>
   </div>
 
-  <!-- Firebase -->
-  <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-database.js"></script>
-  
+  <!-- Firebase (compat builds for namespaced API) -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
+
   <script src="app.js"></script>
 </body>
 </html>
