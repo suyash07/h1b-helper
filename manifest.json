@@ -1,20 +1,11 @@
 {
-  "name": "Travel Companion",
-  "short_name": "TravelApp",
-  "start_url": "/index.html",
+  "name": "H1B Helper - Travel Companion",
+  "short_name": "H1B Helper",
+  "start_url": "./index.html",
+  "scope": "./",
   "display": "standalone",
+  "orientation": "portrait",
   "background_color": "#ffffff",
-  "theme_color": "#7da436",
-  "icons": [
-    {
-      "src": "icon.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "icon.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    }
-  ]
+  "theme_color": "#007AFF",
+  "description": "Find travel companions and share H1B visa information"
 }
